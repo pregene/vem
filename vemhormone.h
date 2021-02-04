@@ -78,5 +78,4 @@ typedef enum {
 #define HOR_CLIP      HORMONE_MAX + 13
 #define HOR_MSH       HORMONE_MAX + 14
 
-
 #endif // __VIRTUAL_EMOTION_HORMONE__

@@ -7,6 +7,8 @@
 #include "vemcell.h"
 #include "vhorgen.h"
 
+#define VPIPE_REACTION_MAX  10
+
 class VPipe
 {
 public:
@@ -17,8 +19,8 @@ private:
   uint32_t    m_type;
   VPipe*      m_prev;
   VPipe*      m_next;
-  VCell*      m_reactor[];
-  VHormone*   m_hormones[];
+  VCell*      m_reactor[VPIPE_REACTION_MAX];
+  VHormone*   m_hormones[VPIPE_REACTION_MAX];
 };
 
 class VPipeStream
@@ -33,6 +35,6 @@ private:
   VPipe*      m_down_tail;
   VPipe*      m_up_header;
   VPipe*      m_up_tail;
-  
 };
+
 #endif // __VIRTUAL_EMOTION_PIPE__
